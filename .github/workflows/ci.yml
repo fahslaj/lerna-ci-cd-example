@@ -21,6 +21,10 @@ jobs:
       - name: Install node, npm, and dependencies
         uses: ./.github/actions/install-dependencies
 
+      - name: Print Environment Info
+        run: npx lerna info
+        shell: bash
+
       - name: Run Tests
         run: npx lerna run test
         shell: bash
@@ -37,6 +41,10 @@ jobs:
 
       - name: Install node, npm, and dependencies
         uses: ./.github/actions/install-dependencies
+
+      - name: Print Environment Info
+        run: npx lerna info
+        shell: bash
 
       - name: Build Packages
         run: npx lerna run build
