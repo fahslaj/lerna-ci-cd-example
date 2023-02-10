@@ -49,3 +49,24 @@ jobs:
       - name: Build Packages
         run: npx lerna run build
         shell: bash
+
+  lint:
+    name: Run Linters
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: 'Checkout repository'
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Install node, npm, and dependencies
+        uses: ./.github/actions/install-dependencies
+
+      - name: Print Environment Info
+        run: npx lerna info
+        shell: bash
+
+      - name: Lint Packages
+        run: npx lerna run lint
+        shell: bash

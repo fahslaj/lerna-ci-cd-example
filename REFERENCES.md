@@ -8,3 +8,4 @@
 - TypeScript tsconfig reference - https://www.typescriptlang.org/tsconfig
 - Publishing a typescript package to npm - https://cameronnokes.com/blog/the-30-second-guide-to-publishing-a-typescript-package-to-npm/
 - Sample github actions development workflow - https://github.com/open-sauced/open-sauced/blob/main/.github/workflows/development.yml
+- TypeScript ESLint getting started - https://typescript-eslint.io/getting-started/
