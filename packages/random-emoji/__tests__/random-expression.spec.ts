@@ -1,7 +1,5 @@
-'use strict';
-
-const { expressions } = require('../lib/expressions');
-const { randomExpression } = require('../lib');
+import { expressions } from '../lib/expressions';
+import { randomExpression } from '../lib/random-expression';
 
 describe('randomExpression', () => {
   it('should return a string', () => {
