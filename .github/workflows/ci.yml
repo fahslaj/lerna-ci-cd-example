@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [assigned, opened, synchronize, reopened, labeled]
+
+jobs:
+  test:
+    name: Run Unit Tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: 'Checkout repository'
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Install node, npm, and dependencies
+        uses: ./.github/actions/install-dependencies
+
+      - name: Run Tests
+        run: npx lerna run test
+        shell: bash
+
+  build:
+    name: Build Packages
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: 'Checkout repository'
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Install node, npm, and dependencies
+        uses: ./.github/actions/install-dependencies
+
+      - name: Build Packages
+        run: npx lerna run build
+        shell: bash
