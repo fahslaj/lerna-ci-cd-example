@@ -1,0 +1,29 @@
+{
+  "name": "@fahslaj/random-emoji",
+  "version": "0.0.0",
+  "description": "Generates strings with random emojis.",
+  "author": "Austin Fahsl <austin@fahsl.io>",
+  "homepage": "https://github.com/fahslaj/lerna-ci-cd-example#readme",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fahslaj/lerna-ci-cd-example.git"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "bugs": {
+    "url": "https://github.com/fahslaj/lerna-ci-cd-example/issues"
+  }
+}
