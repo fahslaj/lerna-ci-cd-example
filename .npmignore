@@ -1,0 +1,2 @@
+# empty .npmignore file is needed to prevent npm from
+# using .gitignore, which ignore the dist folder
