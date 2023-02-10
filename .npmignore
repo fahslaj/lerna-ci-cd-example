@@ -1,2 +1,0 @@
-# Don't publish the unit tests for packages
-__tests__/
