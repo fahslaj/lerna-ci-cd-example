@@ -1,18 +1,11 @@
 name: 'Install dependencies'
 description: Install node and npm via volta, then run npm install
-inputs:
-  default-node-version:
-    description: 'The default node version to use. Overridden by volta configuration.'
-    required: false
-    default: '16'
 
 runs:
   using: 'composite'
   steps:
     - name: Install node and npm via volta
       uses: volta-cli/action@v4
-      with:
-        node-version: ${{ inputs.default-node-version }}
 
     - name: Install dependencies
       run: npm ci
