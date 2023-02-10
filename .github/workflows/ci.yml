@@ -9,7 +9,7 @@ on:
 
 jobs:
   test:
-    name: Run Unit Tests
+    name: Unit Tests
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -30,7 +30,7 @@ jobs:
         shell: bash
 
   build:
-    name: Build Packages
+    name: Build
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -51,7 +51,7 @@ jobs:
         shell: bash
 
   lint:
-    name: Run Linters
+    name: Lint
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
