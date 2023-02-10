@@ -1,2 +1,2 @@
-# empty .npmignore file is needed to prevent npm from
-# using .gitignore, which ignore the dist folder
+# Don't publish the unit tests for packages
+__tests__/

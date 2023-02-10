@@ -15,7 +15,7 @@
     "url": "git+https://github.com/fahslaj/lerna-ci-cd-example.git"
   },
   "scripts": {
-    "prepublish": "npm run build",
+    "prepack": "npm run build",
     "build": "tsc",
     "test": "jest"
   },
