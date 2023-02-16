@@ -4,6 +4,9 @@
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "postversion": "BRANCH_NAME=$(git tag --sort version:refname --points-at HEAD --list \"v*.*.*\" | sed -r -e \"s/(v[0-9]*\\.[0-9]*\\.)[\\w|\\.|-|0-9]*/\\1x/\") && git switch $BRANCH_NAME || git switch -c $BRANCH_NAME"
+  },
   "devDependencies": {
     "@types/jest": "^29.4.0",
     "@typescript-eslint/eslint-plugin": "^5.51.0",
