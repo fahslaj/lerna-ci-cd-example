@@ -7,7 +7,7 @@ on:
 
 jobs:
   test:
-    name: Version
+    name: Publish
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -24,5 +24,7 @@ jobs:
         shell: bash
 
       - name: Publish packages from git
-        run: npx lerna publish from-git
+        run: npx lerna publish from-git -y
         shell: bash
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
