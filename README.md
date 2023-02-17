@@ -1,5 +1,7 @@
 # lerna-ci-cd-example
 
+![ci](https://github.com/fahslaj/lerna-ci-cd-example/actions/workflows/ci.yml/badge.svg)
+
 An example of a package-based monorepo using Lerna, complete with autonomous CI and CD with Github Actions.
 
 See [References](./REFERENCES.md) for resources used to create this example.
