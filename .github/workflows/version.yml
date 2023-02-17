@@ -7,6 +7,9 @@ on:
         description: 'The type of version bump to perform. Must be one of: major, minor, patch, premajor, preminor, prepatch, prerelease'
         required: true
 
+permissions:
+  contents: write
+
 jobs:
   test:
     name: Version
