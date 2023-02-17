@@ -58,3 +58,5 @@ In short, the Publish workflow can be modified in a PR just like the Version wor
 ## Security Summary
 
 > The Version and Publish workflows depend on GitHub secrets, which are only accessible to Collaborators of this repository. Therefore, all Collaborators can release a new version of packages in the repository.
+
+See [this fork](https://github.com/fahslaj-alt/lerna-ci-cd-example) for an example of a forked repository that has modified the Version and Publish workflows, but is still unable to run them due to missing access to the required secrets.
