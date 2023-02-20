@@ -1,6 +1,5 @@
 {
   "name": "@fahslaj/emoji-math",
-  "private": true,
   "version": "1.0.6",
   "description": "Performs basic arithmetic operations using emoji strings to represent expressions.",
   "author": "Austin Fahsl <austin@fahsl.io>",
