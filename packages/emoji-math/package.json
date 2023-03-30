@@ -1,6 +1,6 @@
 {
   "name": "@fahslaj/emoji-math",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Performs basic arithmetic operations using emoji strings to represent expressions.",
   "author": "Austin Fahsl <austin@fahsl.io>",
   "homepage": "https://github.com/fahslaj/lerna-ci-cd-example#readme",
