@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/fahslaj/lerna-ci-cd-example/compare/v1.2.0...v1.2.1) (2023-03-30)
+
+
+### Bug Fixes
+
+* changing files in published package ([#4](https://github.com/fahslaj/lerna-ci-cd-example/issues/4)) ([bca80a2](https://github.com/fahslaj/lerna-ci-cd-example/commit/bca80a27ff082ffdcfbc1429981746306536449b))
+
+
+
 ## [1.2.0](https://github.com/fahslaj/lerna-ci-cd-example/compare/v1.1.2...v1.2.0) (2023-03-30)
 
 
