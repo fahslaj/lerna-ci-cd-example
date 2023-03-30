@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.0](https://github.com/fahslaj/lerna-ci-cd-example/compare/v1.1.2...v1.2.0) (2023-03-30)
+
+
+### Features
+
+* **emoji-math:** support factorials with heavy exclamation point ([#3](https://github.com/fahslaj/lerna-ci-cd-example/issues/3)) ([4a3c9af](https://github.com/fahslaj/lerna-ci-cd-example/commit/4a3c9afe453cbd7e0da232b98a1688cb0af93352))
+
+
+
 ## [1.1.2](https://github.com/fahslaj/lerna-ci-cd-example/compare/v1.1.1...v1.1.2) (2023-03-30)
 
 **Note:** Version bump only for package @fahslaj/emoji-math
