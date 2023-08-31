@@ -2,25 +2,52 @@
 # See: https://circleci.com/docs/configuration-reference
 version: 2.1
 
+commands:
+  # https://github.com/volta-cli/website/issues/43#issuecomment-545393256
+  setup-node:
+    description: Install volta & ensure consistent node & yarn versions are installed
+    steps:
+      - run:
+          name: Install volta
+          command: |
+            curl https://get.volta.sh | bash
+            echo 'export VOLTA_HOME=$HOME/.volta' >> $BASH_ENV
+            echo 'export PATH=$VOLTA_HOME/bin:$PATH' >> $BASH_ENV
+      # export VOLTA_HOME=$HOME/.volta
+      # export PATH=$VOLTA_HOME:$PATH
+      # - run:
+      #     name: Install node
+      #     command: volta install node
+
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/configuration-reference/#jobs
 jobs:
-  say-hello:
-    # Specify the execution environment. You can specify an image from Docker Hub or use one of our convenience images from CircleCI's Developer Hub.
-    # See: https://circleci.com/docs/configuration-reference/#executor-job
+  build:
     docker:
       - image: cimg/base:stable
-    # Add steps to the job
-    # See: https://circleci.com/docs/configuration-reference/#steps
+    shell: bash
     steps:
       - checkout
+      - setup-node
       - run:
-          name: "Say hello"
-          command: "echo Hello, World!"
+          name: 'Print Environment Info'
+          command: printenv
+      - run:
+          name: 'Volta install'
+          command: volta install node
+      - run:
+          name: 'Install npm dependencies'
+          command: 'npm ci'
+      # - run:
+      #     name: 'Print Environment Info'
+      #     command: 'npx lerna info'
+      - run:
+          name: 'Build Packages'
+          command: 'npx lerna run build'
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
 workflows:
-  say-hello-workflow:
+  build-workflow:
     jobs:
-      - say-hello
+      - build
